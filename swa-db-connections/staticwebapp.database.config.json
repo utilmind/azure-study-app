@@ -29,5 +29,32 @@
       "mode": "production"
     }
   },
-  "entities": {}
+  "entities": {
+    "SalesOrderDetail": {
+      "source": {
+        "object": "SalesLT.SalesOrderDetail",
+        "type": "table"
+      },
+      "graphql": {
+        "enabled": true,
+        "type": {
+          "singular": "SalesOrderDetail",
+          "plural": "SalesOrderDetails"
+        }
+      },
+      "rest": {
+        "enabled": true
+      },
+      "permissions": [
+        {
+          "role": "anonymous",
+          "actions": [
+            {
+              "action": "*"
+            }
+          ]
+        }
+      ]
+    }
+  }
 }
